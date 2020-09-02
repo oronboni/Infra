@@ -1,0 +1,27 @@
+<Account isDefault="true" moniker="wcdmdsapplicationweudev" />
+(please replace wcdmdsapplicationweudev with your moniker)
+  </Accounts>
+  <Management eventVolume="Medium" defaultRetentionInDays="29">
+    <Identity>
+      <IdentityComponent name="Tenant">WDATPTCORE</IdentityComponent>
+      <IdentityComponent name="Role">WDATPRCORE</IdentityComponent>
+      <IdentityComponent name="RoleInstance">WDATPRICORE</IdentityComponent>
+    </Identity>
+    <AgentResourceUsage diskQuotaInMB="50000" />
+  </Management>
+  <Sources>
+    <Source name="kubernetes" dynamic_schema="true" />
+  </Sources>
+  <Events>
+    <HeartBeats>
+      <HeartBeat sampleRateInSeconds="60" duration="PT5M" storeType="CentralBond" eventName="heartheat" />
+    </HeartBeats>
+    <MdsdEvents>
+      <MdsdEventSource source="kubernetes">
+        <RouteEvent storeType="CentralBond" eventName="wdatplogtest" priority="Normal" account="wcdmdsapplicationweudev" />
+(please replace wdatplogtest (event name) to any event name that you think)
+(please replace wcdmdsapplicationweudev to the moniker name/alias)
+      </MdsdEventSource>
+    </MdsdEvents>
+  </Events>
+</MonitoringManagement>
