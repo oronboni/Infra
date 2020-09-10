@@ -1,7 +1,7 @@
 # Cluster creation
 
 ## Prerequisites
-- Azure subscription (Owner permissions)
+- Azure subscription (`Owner` permissions)
 - [Docker for Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Kubectl](https://storage.googleapis.com/kubernetes-release/release/v1.18.6/bin/windows/amd64/kubectl.exe) (You might not need is, can be configured via Docker For Desktop. Just make sure you have kubectl on your machine)
 - [Helm](https://github.com/helm/helm/releases/tag/v2.16.1) (Note that we still use Helm 2 for this lab, which is end of life soon)
@@ -28,7 +28,7 @@
 ![AzureApplicationCreateSecret1](Images/AzureApplicationCreateSecret1.png)  
 ![AzureApplicationCreateSecret2](Images/AzureApplicationCreateSecret2.png)  
 
-Give the application owner permissions on the subscription. Make sure you have the following properties saved:
+Give the application `Owner` permissions on the subscription. Make sure you have the following properties saved:
 ```
 - Application client ID 
 - Application secret
@@ -144,7 +144,7 @@ Login to the course ACR by running the following commands:
 ```
 docker login infrastructurecourse.azurecr.io
 ACR user: infraStructureCourse
-ACR admin password: <Will be provided during the lab>
+ACR admin password: <will be provided during the lab>
 ```
 
 Pull and Push the required images:
@@ -185,8 +185,7 @@ docker tag infrastructurecourse.azurecr.io/ prom-mdm-converter:2.0.master.202001
 docker push <your ACR>/prom-mdm-converter:2.0.master.20200115.1
 ```
 
-Last 2 things:
-- Give acrPull permission to the User Assigned Managed Identity which was created few sections above
+Last thing:
 - Create a MS Key Vault
 
 
