@@ -64,7 +64,7 @@ Create User Assigned Managed Identity in the same resource group where the clust
 Should look like this:  
 ![UserAssignedManagedIdentity1](Images/UserAssignedManagedIdentity1.png)  
 
-Go to the VMSS azure resources created from the AKS cluster creation command (under MC_MyManagedClusterRG_* resource group), and click on the Identity section:  
+Go to the VMSS that was created by the AKS cluster creation command (under MC_MyManagedClusterRG_* resource group), and click on the Identity section:  
 ![UserAssignedManagedIdentity2](Images/UserAssignedManagedIdentity2.png)  
   
 Add the identity that you just created:  
@@ -144,10 +144,10 @@ Login to the course ACR by running the following commands:
 ```
 docker login infrastructurecourse.azurecr.io
 ACR user: infraStructureCourse
-ACR admin password: nTqatwu89G/SxPqaDKCqQHxxQo92nVJQ
+ACR admin password: <Will be provided during the lab>
 ```
 
-Pull&Push the required images:
+Pull and Push the required images:
 ```
 // genevamdsd:master_249
 docker pull infrastructurecourse.azurecr.io/genevamdsd:master_249
@@ -186,10 +186,10 @@ docker push <your ACR>/prom-mdm-converter:2.0.master.20200115.1
 ```
 
 Last 2 things:
-- Give acrPull permission to the User Assigned Managed Identity which was created few sections above)
+- Give acrPull permission to the User Assigned Managed Identity which was created few sections above
 - Create a MS Key Vault
 
 
-If you reached here, well done!!!
+If you reached here, **well done!!!**
  
 
