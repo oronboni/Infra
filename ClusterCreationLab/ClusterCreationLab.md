@@ -28,7 +28,9 @@
 ![AzureApplicationCreateSecret1](Images/AzureApplicationCreateSecret1.png)  
 ![AzureApplicationCreateSecret2](Images/AzureApplicationCreateSecret2.png)  
 
-Give the application `Owner` permissions on the subscription. Make sure you have the following properties saved:
+**Give the application `Owner` permissions on the subscription. Owner permissions are necessary to continue with the following steps.**  ([Azure documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal))  
+  
+Make sure you have the following properties saved:
 ```
 - Application client ID 
 - Application secret
