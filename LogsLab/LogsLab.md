@@ -25,7 +25,7 @@ Also, please give `Get` permission to the key vault (so that Geneva containers w
 ### Download log tailer chart
 The following commands need password, that will be provided during the lab:
 ```
-az login --service-principal -u 0f6a9b10-0ee9-4ae7-9c4e-9ddb192617b7 -p <will be provided during the lab> --tenant 72f988bf-86f1-41af-91ab-2d7cd011db47 
+az login --service-principal -u <Application client ID> -p <Application secret>  --tenant <Tenant ID> 
 
 az configure --defaults acr=infraStructureCourse 
 
@@ -104,7 +104,7 @@ You can get the configuration from [here](configurations/Geneva-Configuration.xm
 ### Download Geneva-Logger chart
 The following commands need password, that will be provided during the lab: 
 ```
-az login --service-principal -u 0f6a9b10-0ee9-4ae7-9c4e-9ddb192617b7 -p <will be provided during the lab> --tenant 72f988bf-86f1-41af-91ab-2d7cd011db47 
+az login --service-principal -u <Application client ID> -p <Application secret>  --tenant <Tenant ID> 
 
 az configure --defaults acr=infraStructureCourse 
 
