@@ -151,6 +151,11 @@ ACR admin password: <will be provided during the lab>
 
 Pull and Push the required images:
 ```
+// ubuntu:16.04
+docker pull infrastructurecourse.azurecr.io/ubuntu:16.04
+docker tag infrastructurecourse.azurecr.io/ubuntu:16.04 <your ACR Login server>/ubuntu:16.04
+docker push <your ACR Login server>/ubuntu:16.04
+
 // genevamdsd:master_249
 docker pull infrastructurecourse.azurecr.io/genevamdsd:master_249
 docker tag infrastructurecourse.azurecr.io/genevamdsd:master_249 <your ACR Login server>/genevamdsd:master_249
