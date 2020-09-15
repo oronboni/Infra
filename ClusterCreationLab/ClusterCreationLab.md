@@ -153,38 +153,38 @@ Pull and Push the required images:
 ```
 // genevamdsd:master_249
 docker pull infrastructurecourse.azurecr.io/genevamdsd:master_249
-docker tag infrastructurecourse.azurecr.io/genevamdsd:master_249  <your ACR>/ genevamdsd:master_249
-docker push <your ACR>/genevamdsd:master_249
+docker tag infrastructurecourse.azurecr.io/genevamdsd:master_249 <your ACR Login server>/genevamdsd:master_249
+docker push <your ACR Login server>/genevamdsd:master_249
 
 // genevamdm:master_31
 docker pull infrastructurecourse.azurecr.io/genevamdm:master_31
-docker tag infrastructurecourse.azurecr.io/genevamdm:master_31  <your ACR>/ genevamdm:master_31
-docker push <your ACR>/genevamdm:master_31
+docker tag infrastructurecourse.azurecr.io/genevamdm:master_31 <your ACR Login server>/genevamdm:master_31
+docker push <your ACR Login server>/genevamdm:master_31
 
 // genevafluentd_td-agent:master_129
 docker pull infrastructurecourse.azurecr.io/genevafluentd_td-agent:master_129
-docker tag infrastructurecourse.azurecr.io/genevafluentd_td-agent:master_129 <your ACR>/ genevafluentd_td-agent:master_129
-docker push <your ACR>/genevafluentd_td-agent:master_129
+docker tag infrastructurecourse.azurecr.io/genevafluentd_td-agent:master_129 <your ACR Login server>/genevafluentd_td-agent:master_129
+docker push <your ACR Login server>/genevafluentd_td-agent:master_129
 
 // kube-gen:master_14
 docker pull infrastructurecourse.azurecr.io/ kube-gen:master_15
-docker tag infrastructurecourse.azurecr.io/ kube-gen:master_15 <your ACR</kube-gen:master_15
-docker push <your ACR>/kube-gen:master_15
+docker tag infrastructurecourse.azurecr.io/ kube-gen:master_15 <your ACR Login server>/kube-gen:master_15
+docker push <your ACR Login server>/kube-gen:master_15
 
 // kubectl:master_11
 docker pull infrastructurecourse.azurecr.io/kubectl:master_11
-docker tag infrastructurecourse.azurecr.io/ kubectl:master_11 <your ACR>/kubectl:master_11
-docker push <your ACR>/kubectl:master_11
+docker tag infrastructurecourse.azurecr.io/ kubectl:master_11 <your ACR Login server>/kubectl:master_11
+docker push <your ACR Login server>/kubectl:master_11
 
 // acskeyvaultagent:master_19
 docker pull infrastructurecourse.azurecr.io/acskeyvaultagent:master_19
-docker tag infrastructurecourse.azurecr.io/acskeyvaultagent:master_19 <your ACR>/ acskeyvaultagent:master_19
-docker push <your ACR>/acskeyvaultagent:master_19
+docker tag infrastructurecourse.azurecr.io/acskeyvaultagent:master_19 <your ACR Login server>/acskeyvaultagent:master_19
+docker push <your ACR Login server>/acskeyvaultagent:master_19
 
 // prom-mdm-converter:2.0.master.20200115.1
 docker pull infrastructurecourse.azurecr.io/ prom-mdm-converter:2.0.master.20200115.1
-docker tag infrastructurecourse.azurecr.io/ prom-mdm-converter:2.0.master.20200115.1<your ACR>/ prom-mdm-converter:2.0.master.20200115.1
-docker push <your ACR>/prom-mdm-converter:2.0.master.20200115.1
+docker tag infrastructurecourse.azurecr.io/ prom-mdm-converter:2.0.master.20200115.1<your ACR Login server>/prom-mdm-converter:2.0.master.20200115.1
+docker push <your ACR Login server>/prom-mdm-converter:2.0.master.20200115.1
 ```
 
 Last thing:
