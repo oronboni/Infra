@@ -34,15 +34,15 @@ and follow the instructions.
 
 ## 2. Enable k8s within docker-desktop
 - [x] open the dashboard (Right click on Docker icon & press on dashboard)
-![image.png](/.attachments/image-09c459ea-ce12-4b99-b42b-444be486aadf.png)
-![image.png](/.attachments/image-cd25c460-0d1b-4895-b748-d20d02a7126e.png)
+![image.png](/image-09c459ea-ce12-4b99-b42b-444be486aadf.png)
+![image.png](/image-cd25c460-0d1b-4895-b748-d20d02a7126e.png)
 
  - [x] Press on settings and then Mark the checkbox for enable Kubernetes
-![image.png](/.attachments/image-f14291ad-cce4-4c01-be5c-9abd13a9aec0.png)
+![image.png](/image-f14291ad-cce4-4c01-be5c-9abd13a9aec0.png)
 - [x] Make sure k8s is up and running from UI
-![image.png](/.attachments/image-b962fb5b-af69-4cd6-9852-fd7f3abaea97.png)
+![image.png](/image-b962fb5b-af69-4cd6-9852-fd7f3abaea97.png)
 - [x] Make sure k8s is up and running from CLI
-![image.png](/.attachments/image-39701dfe-a7e5-4245-a5ad-636cc176e265.png)
+![image.png](/image-39701dfe-a7e5-4245-a5ad-636cc176e265.png)
 
 # Task 2 - Create namespace with kubectl command 
 ---
@@ -61,7 +61,7 @@ metadata:
 kubectl apply -f namespace.yaml
 kubectl get namespaces
 ```
-![image.png](/.attachments/image-59d46f9e-de1e-4a42-9e6b-f02a8278b0eb.png)
+![image.png](/image-59d46f9e-de1e-4a42-9e6b-f02a8278b0eb.png)
 
 # Task 3 - Create Limits 
 ## 1. Create Limits yaml
@@ -92,7 +92,7 @@ kubectl apply -f LimitsCreation.yaml
 kubectl get limits -n mdatp
 kubectl describe limits -n mdatp limit-range
 ```
-![image.png](/.attachments/image-87249546-fedf-444e-b44c-2e51b5ba5ee1.png)
+![image.png](/image-87249546-fedf-444e-b44c-2e51b5ba5ee1.png)
 
 # Task 4 - Create Services & Deployments
 ## 1. Create Deployment and services yaml
@@ -182,7 +182,7 @@ kubectl apply -f deployments-and-services.yaml
 kubectl get svc -n mdatp
 kubectl get deployments -n mdatp
 ```
-![image.png](/.attachments/image-feb0212b-5846-4528-9196-199faa53e94d.png)
+![image.png](/image-feb0212b-5846-4528-9196-199faa53e94d.png)
 
 # Task 5 - Cleanup 
 ## 1. Clean all the resources
@@ -194,7 +194,7 @@ kubectl delete namespace mdatp
 kubectl get ns
 kubectl get pods -n mdatp
 ```
-![image.png](/.attachments/image-4b77c7f3-0dae-45c2-af25-74f8d20a86a6.png)
+![image.png](/image-4b77c7f3-0dae-45c2-af25-74f8d20a86a6.png)
 # Task 6 - Use Helm to automate Tasks 2,3,4
 ## 1. Install Helm
 - [x] Download the latest release[here](https://helm.sh/docs/intro/install/)
@@ -204,33 +204,33 @@ kubectl get pods -n mdatp
 ```
 helm version
 ```
-![image.png](/.attachments/image-cea88f03-421b-45a0-b672-dd53c9c44b83.png)
+![image.png](/image-cea88f03-421b-45a0-b672-dd53c9c44b83.png)
 ## 3. Create your first helm chart
 ```
 helm create my_first_helm_chart
 ```
-![image.png](/.attachments/image-1b0eeff0-cc50-4281-98bf-f347f1b3d58e.png)
+![image.png](/image-1b0eeff0-cc50-4281-98bf-f347f1b3d58e.png)
 
 ## 4. Cleanup helm initial directory
 - [x] Clean values.yaml file, should be empty
 - [x] templates directory should be empty
 - [x] Remove all files except the files below
-![image.png](/.attachments/image-b01d9682-b8a9-48d4-b94f-98e4863e22a2.png)
+![image.png](/image-b01d9682-b8a9-48d4-b94f-98e4863e22a2.png)
 ## 5. Copy the files to helm templates directory
-![image.png](/.attachments/image-bf7c40f9-d958-4fdd-9d53-3f8638f4f954.png)
+![image.png](/image-bf7c40f9-d958-4fdd-9d53-3f8638f4f954.png)
 ## 6. Install the helm chart
 ```
 helm upgrade --install my-first-release my_first_release_chart
 ```
-![image.png](/.attachments/image-89052a04-8f80-406d-a162-12861ad1e080.png)
+![image.png](/image-89052a04-8f80-406d-a162-12861ad1e080.png)
 ## 7. Validate the helm chart installation
-![image.png](/.attachments/image-7eb31d8a-8524-4a79-8669-dda6086edfaf.png)
+![image.png](/image-7eb31d8a-8524-4a79-8669-dda6086edfaf.png)
 
 ## 8. Cleanup chart installation
 ```
 helm del my-first-release
 ```
-![image.png](/.attachments/image-717b4163-8da5-40bd-b3de-9ccb8b5712e1.png)
+![image.png](/image-717b4163-8da5-40bd-b3de-9ccb8b5712e1.png)
 
 
 # Task 7 - Use Helm with values
@@ -245,7 +245,7 @@ Go over all the files under templates and replace "mdatp" with "{{ .Values.cafen
 helm upgrade --install my-first-release my_first_release_chart
 ```
 ## 4.Validate the helm chart installation
-![image.png](/.attachments/image-d3da8da8-b19a-4721-82e6-4462522638b1.png)
+![image.png](/image-d3da8da8-b19a-4721-82e6-4462522638b1.png)
 
 # Task 8 - Create Ingress Controller
 ## 1. Setup ingress controller as a cluster “entry point” 
@@ -284,7 +284,7 @@ spec:
 kubectl apply -f ingress-nginx-service.yaml
 kubectl get svc -n ingress-nginx 
 ```
-![image.png](/.attachments/image-64b292ef-f00e-4717-9a4b-514679f5324c.png)
+![image.png](/image-64b292ef-f00e-4717-9a4b-514679f5324c.png)
 
 ## 4. Create Ingress rules yaml file
 
@@ -331,7 +331,7 @@ spec:
 ```
 kubectl apply -f ingress.yaml
 ```
-![image.png](/.attachments/image-4396c7e6-2fde-40ad-8039-3c2de3dd415d.png)
+![image.png](/image-4396c7e6-2fde-40ad-8039-3c2de3dd415d.png)
 
 ## 6. Validate the ingress rules
 ### Update hosts file
@@ -354,17 +354,17 @@ you should see the nginx response and the round robin change in the server-name/
 ```
 kubectl get svc -n ingress-nginx
 ```
-![image.png](/.attachments/image-1b5d62f1-3984-47cf-80f9-eacc7e9f76cf.png)
+![image.png](/image-1b5d62f1-3984-47cf-80f9-eacc7e9f76cf.png)
 ----
 - http://cafe.com:<port>/coffee (in our case http://cafe.com:32275/coffee)
 - http://cafe.com:<port>/tea (in our case http://cafe.com:32275/tea)
-![image.png](/.attachments/image-9cd61252-e37b-4fcb-9c3c-24491433d820.png)
+![image.png](/image-9cd61252-e37b-4fcb-9c3c-24491433d820.png)
 - [x] Postman extenstion
 ----
 You can also user postman (chrome extension)
 - http://cafe.com:32275/tea
-![image.png](/.attachments/image-814b3745-9b88-4bdf-91b0-46f0bb79a920.png)
+![image.png](/image-814b3745-9b88-4bdf-91b0-46f0bb79a920.png)
 - http://cafe.com:32275/coffee
-![image.png](/.attachments/image-0af319a5-1f80-40ab-86f7-c6ebccb840c8.png)
+![image.png](/image-0af319a5-1f80-40ab-86f7-c6ebccb840c8.png)
 
 
