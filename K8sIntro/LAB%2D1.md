@@ -1,7 +1,6 @@
 [[_TOC_]]
 
 ## Prerequisites
-- Azure subscription (`Owner` permissions)
 - [Docker for Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Kubectl](https://storage.googleapis.com/kubernetes-release/release/v1.18.6/bin/windows/amd64/kubectl.exe) (You might not need is, can be configured via Docker For Desktop. Just make sure you have kubectl on your machine)
 - [Helm](https://github.com/helm/helm/releases/tag/v2.16.1) (Note that we still use Helm 2 for this lab, which is end of life soon)
