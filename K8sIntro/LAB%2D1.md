@@ -193,7 +193,7 @@ kubectl delete namespace citi
 kubectl get ns
 kubectl get pods -n citi
 ```
-![image.png](image-4b77c7f3-0dae-45c2-af25-74f8d20a86a6.png)
+![image.png](deletenamespace.PNG)
 # Task 6 - Use Helm to automate Tasks 2,3,4
 ## 1. Install Helm
 - [x] Download the latest release[here](https://helm.sh/docs/intro/install/)
