@@ -60,7 +60,7 @@ metadata:
 kubectl apply -f namespace.yaml
 kubectl get namespaces
 ```
-![image.png](namespace.png)
+![image.png](namespace.PNG)
 
 # Task 3 - Create Limits 
 ## 1. Create Limits yaml
