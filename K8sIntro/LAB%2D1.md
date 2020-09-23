@@ -91,7 +91,7 @@ kubectl apply -f LimitsCreation.yaml
 kubectl get limits -n citi
 kubectl describe limits -n citi limit-range
 ```
-![image.png](limits.PNG)
+![image.png](Limits.PNG)
 
 # Task 4 - Create Services & Deployments
 ## 1. Create Deployment and services yaml
