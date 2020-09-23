@@ -91,13 +91,13 @@ kubectl apply -f LimitsCreation.yaml
 kubectl get limits -n citi
 kubectl describe limits -n citi limit-range
 ```
-![image.png](image-87249546-fedf-444e-b44c-2e51b5ba5ee1.png)
+![image.png](limits.PNG)
 
 # Task 4 - Create Services & Deployments
 ## 1. Create Deployment and services yaml
 Create a yaml file "deployments-and-services.yaml"
 ```
-apiVersion: extensions/v1beta1 
+apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
   name: coffee 
@@ -135,7 +135,7 @@ spec:
     app: coffee 
     
 --- 
-apiVersion: extensions/v1beta1 
+apiVersion: apps/v1
 
 kind: Deployment 
 metadata: 
@@ -181,7 +181,7 @@ kubectl apply -f deployments-and-services.yaml
 kubectl get svc -n citi
 kubectl get deployments -n citi
 ```
-![image.png](image-feb0212b-5846-4528-9196-199faa53e94d.png)
+![image.png](deployment.PNG)
 
 # Task 5 - Cleanup 
 ## 1. Clean all the resources

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limit-range
+  namespace: citi
+spec:
+  limits:
+  - defaultRequest:
+      cpu: 100m
+      memory: 256Mi
+    max:
+      cpu: 1000m
+      memory: 3Gi
+    min:
+      cpu: 5m
+      memory: 5Mi
+    type: Container
