@@ -196,7 +196,7 @@ kubectl get pods -n citi
 ![image.png](deletenamespace.PNG)
 # Task 6 - Use Helm to automate Tasks 2,3,4
 ## 1. Install Helm
-- [x] Download the latest release[here](https://helm.sh/docs/intro/install/)
+- [x] Download the latest release[here](https://github.com/helm/helm/releases)
 - [x] Extract to folder, and add the folder created to environment variables (path). 
 
 ## 2. Verify installation
@@ -219,9 +219,9 @@ helm create my_first_helm_chart
 ![image.png](image-bf7c40f9-d958-4fdd-9d53-3f8638f4f954.png)
 ## 6. Install the helm chart
 ```
-helm upgrade --install my-first-release my_first_release_chart
+helm upgrade --install my-first-release my_first_helm_chart
 ```
-![image.png](image-89052a04-8f80-406d-a162-12861ad1e080.png)
+![image.png](Helm.PNG)
 ## 7. Validate the helm chart installation
 ![image.png](image-7eb31d8a-8524-4a79-8669-dda6086edfaf.png)
 
