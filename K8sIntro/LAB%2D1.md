@@ -52,7 +52,7 @@ Create a yaml file "namespace.yaml"
 apiVersion: v1 
 kind: Namespace 
 metadata: 
-  name: mdatp
+  name: citi
 ```
 
 ## 2. Create & validate namespace
@@ -70,7 +70,7 @@ apiVersion: v1
 kind: LimitRange
 metadata:
   name: limit-range
-  namespace: mdatp
+  namespace: citi
 spec:
   limits:
   - defaultRequest:
@@ -88,8 +88,8 @@ spec:
 ## 2. Create & Validate the limits
 ```
 kubectl apply -f LimitsCreation.yaml
-kubectl get limits -n mdatp
-kubectl describe limits -n mdatp limit-range
+kubectl get limits -n citi
+kubectl describe limits -n citi limit-range
 ```
 ![image.png](image-87249546-fedf-444e-b44c-2e51b5ba5ee1.png)
 
@@ -101,7 +101,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment 
 metadata: 
   name: coffee 
-  namespace: mdatp
+  namespace: citi
 spec: 
   replicas: 2 
   selector: 
@@ -124,7 +124,7 @@ apiVersion: v1
 kind: Service 
 metadata: 
   name: coffee-svc 
-  namespace: mdatp
+  namespace: citi
 spec: 
   ports: 
   - port: 80 
@@ -140,7 +140,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment 
 metadata: 
   name: tea 
-  namespace: mdatp
+  namespace: citi
 spec: 
   replicas: 3 
   selector: 
@@ -163,7 +163,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: tea-svc
-  namespace: mdatp
+  namespace: citi
   labels: 
 spec: 
   ports: 
@@ -178,20 +178,20 @@ spec:
 ## 2. Create & validate services and deployments
 ```
 kubectl apply -f deployments-and-services.yaml
-kubectl get svc -n mdatp
-kubectl get deployments -n mdatp
+kubectl get svc -n citi
+kubectl get deployments -n citi
 ```
 ![image.png](image-feb0212b-5846-4528-9196-199faa53e94d.png)
 
 # Task 5 - Cleanup 
 ## 1. Clean all the resources
 ```
-kubectl delete namespace mdatp
+kubectl delete namespace citi
 ```
 ## 2. Validate the cleanup
 ```
 kubectl get ns
-kubectl get pods -n mdatp
+kubectl get pods -n citi
 ```
 ![image.png](image-4b77c7f3-0dae-45c2-af25-74f8d20a86a6.png)
 # Task 6 - Use Helm to automate Tasks 2,3,4
@@ -293,7 +293,7 @@ apiVersion: apps/v1
 kind: Ingress 
 metadata: 
   name: coffee-ingress 
-  namespace: mdatp 
+  namespace: citi 
   annotations: 
     kubernetes.io/ingress.class: nginx 
     nginx.ingress.kubernetes.io/rewrite-target: /$1 
@@ -312,7 +312,7 @@ apiVersion: apps/v1
 kind: Ingress 
 metadata: 
   name: tea-ingress 
-  namespace: mdatp 
+  namespace: citi 
   annotations: 
     kubernetes.io/ingress.class: nginx 
     nginx.ingress.kubernetes.io/rewrite-target: /$1 
