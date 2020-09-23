@@ -289,7 +289,7 @@ kubectl get svc -n ingress-nginx
 
 Create file "ingress.yaml"
 ```
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Ingress 
 metadata: 
   name: coffee-ingress 
@@ -308,7 +308,7 @@ spec:
         path: /coffee   
 --- 
  
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Ingress 
 metadata: 
   name: tea-ingress 
