@@ -1,7 +1,8 @@
 [[_TOC_]]
 
 ## Prerequisites
-- [Docker for Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+- [Docker for Desktop](https://hub.docker.co
+- m/editions/community/docker-ce-desktop-windows)
 - [Kubectl](https://storage.googleapis.com/kubernetes-release/release/v1.18.6/bin/windows/amd64/kubectl.exe) (You might not need is, can be configured via Docker For Desktop. Just make sure you have kubectl on your machine)
 - [Helm](https://github.com/helm/helm/releases/tag/v2.16.1) (Note that we still use Helm 2 for this lab, which is end of life soon)
 
@@ -237,8 +238,8 @@ helm del my-first-release
 ```
 cafenamespace: test 
 ```
-## 2. Find and replace mdatp to parameter
-Go over all the files under templates and replace "mdatp" with "{{ .Values.cafenamespace }}"
+## 2. Find and replace citi to parameter
+Go over all the files under templates and replace "citi" with "{{ .Values.cafenamespace }}"
 ## 3. Install the helm chart
 ```
 helm upgrade --install my-first-release my_first_release_chart
