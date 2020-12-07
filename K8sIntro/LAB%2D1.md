@@ -47,7 +47,7 @@ and follow the instructions.
 # Task 2 - Create namespace with kubectl command 
 ---
 
-## 1. Create mdatp namespace yaml
+## 1. Create citi namespace yaml
 Create a yaml file "namespace.yaml"
 ```
 apiVersion: v1 
