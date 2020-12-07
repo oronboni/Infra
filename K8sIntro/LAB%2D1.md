@@ -294,7 +294,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress 
 metadata: 
   name: coffee-ingress 
-  namespace: citi 
+  namespace: test 
   annotations: 
     kubernetes.io/ingress.class: nginx 
     nginx.ingress.kubernetes.io/rewrite-target: /$1 
@@ -313,7 +313,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress 
 metadata: 
   name: tea-ingress 
-  namespace: citi 
+  namespace: test 
   annotations: 
     kubernetes.io/ingress.class: nginx 
     nginx.ingress.kubernetes.io/rewrite-target: /$1 
