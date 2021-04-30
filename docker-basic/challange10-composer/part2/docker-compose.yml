@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  backend:
+    image: link-extractor-api:2.0
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_URL=redis://redis-db:6379
+  web:
+    image: link-extractor-web:2.0
+    ports:
+      - "80:80"
+    environment:
+      - API_ENDPOINT=http://backend:5000/api/
+  redis-db:
+    image: redis
+    ports:
+      - "6379:6379"
