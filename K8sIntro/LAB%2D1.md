@@ -290,42 +290,46 @@ kubectl get svc -n ingress-nginx
 
 Create file "ingress.yaml"
 ```
-apiVersion: extensions/v1beta1
-kind: Ingress 
-metadata: 
-  name: coffee-ingress 
-  namespace: test 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: coffee-ingress
+  namespace: citi 
   annotations: 
-    kubernetes.io/ingress.class: nginx 
     nginx.ingress.kubernetes.io/rewrite-target: /$1 
-spec: 
-  rules: 
-  - host: cafe.com 
-    http: 
-      paths:  
-      - backend: 
-          serviceName: coffee-svc 
-          servicePort: 80 
-        path: /coffee   
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /coffee
+        pathType: Prefix
+        backend:
+          service:
+            name: coffee-svc
+            port:
+              number: 80  
 --- 
  
-apiVersion: extensions/v1beta1
-kind: Ingress 
-metadata: 
-  name: tea-ingress 
-  namespace: test 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tea-ingress
+  namespace: citi 
   annotations: 
-    kubernetes.io/ingress.class: nginx 
-    nginx.ingress.kubernetes.io/rewrite-target: /$1 
-spec: 
-  rules: 
-  - host: cafe.com 
-    http: 
-      paths:  
-      - backend: 
-          serviceName: tea-svc 
-          servicePort: 80 
-        path: /tea
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /tea
+        pathType: Prefix
+        backend:
+          service:
+            name: tea-svc
+            port:
+              number: 80 
 ```
 ## 5. Create ingress rules
 ```
