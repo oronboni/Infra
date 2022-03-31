@@ -250,7 +250,7 @@ helm upgrade --install my-first-release my_first_release_chart
 # Task 8 - Create Ingress Controller
 ## 1. Setup ingress controller as a cluster “entry point” 
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.22.0/deploy/mandatory.yaml 
+kubectl apply -f https://github.com/oronboni/Infra/blob/master/K8sIntro/yamls/ingress-nginx-service.yaml
 ```
 ## 2. Create nginx service yaml
 Create a yaml file "ingress-nginx-service.yaml"
